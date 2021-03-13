@@ -4,6 +4,8 @@ Created by Justin Kula on 3/13/2021
 '''
 
 from collections import namedtuple
+# The decimal type is used to help avoid floating point errors on display
+from decimal import Decimal
 
 # Define a type that will be used for points
 Point = namedtuple('Point', ['x', 'y'])
@@ -17,11 +19,11 @@ def compute_manhattan_distance(p1, p2):
 
 def is_numeric(s):
     '''
-    Returns True if it is possible to convert the provided string as a float,
+    Returns True if it is possible to convert the provided string as a decimal,
     and False otherwise
     '''
     try:
-        float(s)
+        Decimal(s)
         return True
     except:
         return False
@@ -38,7 +40,7 @@ def input_variable(variable):
         if not is_numeric(n):
             print("Invalid value for", variable, "- Please enter a numeric value")
             n = None
-    return float(n)
+    return Decimal(n)
 
 def input_yn(message):
     '''
@@ -66,17 +68,18 @@ def input_point(name):
 
 
 # begin main sequence
-print("-----Welcome to Manhattan Distance Calculator by Justin Kula, 2021-----\n")
-while True:
-    p1 = input_point("p1")
-    print("\n")
-    p2 = input_point("p2")
-    result = compute_manhattan_distance(p1,p2)
-    print("\nManhattan Distance Result:", result, "\n")
-    yn = input_yn("Would you like to compute another? (y/n): ")
-    if yn == "n":
-        break
-    else:
+if __name__ == '__main__':
+    print("-----Welcome to Manhattan Distance Calculator by Justin Kula, 2021-----\n")
+    while True:
+        p1 = input_point("p1")
         print("\n")
+        p2 = input_point("p2")
+        result = compute_manhattan_distance(p1,p2)
+        print("\nManhattan Distance Result:", result, "\n")
+        yn = input_yn("Would you like to compute another? (y/n): ")
+        if yn == "n":
+            break
+        else:
+            print("\n")
 
-print("\nThank you for using the calculator!")
+    print("\nThank you for using the calculator!")
