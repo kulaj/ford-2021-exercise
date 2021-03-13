@@ -8,3 +8,5 @@ Installation and Operating Instructions:
  - Depending on your python3 installation and operating system, the command to run the application will be one of the following: 
    - `python3 manhattan.py` (typically required for macOS or Linux installations)
    - `py -3 manhattan.py` (typically required for windows installations)
+
+To run the test suite, execute either `python3 tests.py` or `py -3 tests.py`, depending on your operating system.
