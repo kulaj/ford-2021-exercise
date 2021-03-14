@@ -9,7 +9,8 @@ Installation and Operating Instructions:
    - `python3 manhattan.py` (typically required for macOS or Linux installations)
    - `py -3 manhattan.py` (typically required for windows installations)
 
-To run the test suite, execute either `python3 tests.py` or `py -3 tests.py`, depending on your operating system.
+Unit Tests:
+- To run the test suite, execute either `python3 tests.py` or `py -3 tests.py`, depending on your operating system.
 
 Example Screenshot (includes input error demonstration):
 ![image](https://user-images.githubusercontent.com/25033887/111053006-3788b400-842e-11eb-8ce2-7b726cb12ebe.png)
