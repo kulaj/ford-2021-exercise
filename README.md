@@ -7,7 +7,7 @@ Installation and Operating Instructions:
  - Navigate to the project directory in terminal by executing: `cd ford-2021-exercise`
  - Depending on your python3 installation and operating system, the command to run the application will be one of the following: 
    - `python3 manhattan.py` (typically required for macOS or Linux installations)
-   - `py -3 manhattan.py` (typically required for windows installations)
+   - `py -3 manhattan.py` (typically required for Windows installations)
 
 Unit Tests:
 - To run the test suite, execute either `python3 tests.py` or `py -3 tests.py`, depending on your operating system.
